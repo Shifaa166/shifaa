@@ -1,0 +1,659 @@
+/* =========================================
+   SHIFAA — MAIN STYLE
+========================================= */
+
+:root {
+  --bg: #81785a;
+  --olive: #284722;
+  --olive-light: #52684b;
+  --cream: #eeeade;
+  --white: #ffffff;
+  --text-dark: #263521;
+  --muted: #dcd9ca;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 7%;
+
+  background: rgba(129, 120, 90, 0.78);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.nav-logo {
+  width: 78px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #dce4d8;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 150px 8% 100px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* Decorative circle */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background: rgba(40,71,34,0.16);
+
+  top: -300px;
+  left: -200px;
+
+  pointer-events: none;
+}
+
+
+/* Hero text */
+
+.hero-text {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 620px;
+}
+
+.small-title {
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  color: #e8e6dc;
+
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: "Amiri", serif;
+
+  font-size: clamp(70px, 9vw, 120px);
+
+  line-height: 0.9;
+
+  margin-bottom: 25px;
+}
+
+.hero h2 {
+  font-family: "Amiri", serif;
+
+  font-size: clamp(26px, 3vw, 43px);
+
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 520px;
+
+  color: #f0eee7;
+
+  font-size: 16px;
+
+  line-height: 2;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: all 0.35s ease;
+}
+
+.btn-primary {
+  background: var(--olive);
+
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.45);
+
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.hero-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+
+  z-index: -1;
+}
+
+.hero-image img {
+  width: min(450px, 90%);
+
+  max-height: 600px;
+
+  object-fit: cover;
+
+  border-radius: 230px 230px 35px 35px;
+
+  box-shadow: 0 35px 80px rgba(0,0,0,0.22);
+
+  transition: 0.6s ease;
+}
+
+.hero-image img:hover {
+  transform: translateY(-10px);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section {
+  padding: 110px 8%;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.section-title span {
+  display: block;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  color: var(--olive-light);
+
+  margin-bottom: 12px;
+}
+
+.section-title h2 {
+  font-family: "Amiri", serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   PRODUCTS
+========================================= */
+
+.products {
+  background: var(--cream);
+
+  color: var(--text-dark);
+}
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+
+  border-radius: 26px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(40,71,34,0.08);
+
+  transition: 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-image {
+  height: 280px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #d8d4c3;
+
+  color: var(--olive);
+
+  font-size: 14px;
+}
+
+.product-info {
+  padding: 28px;
+}
+
+.product-info h3 {
+  font-family: "Amiri", serif;
+
+  font-size: 30px;
+
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  color: #697163;
+
+  font-size: 14px;
+
+  line-height: 2;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+  background: var(--bg);
+
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+
+  margin: auto;
+}
+
+.about-content h2 {
+  font-family: "Amiri", serif;
+
+  font-size: 55px;
+
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  color: #f0eee7;
+
+  font-size: 17px;
+
+  line-height: 2.3;
+}
+
+
+/* =========================================
+   NFC
+========================================= */
+
+.nfc {
+  background: var(--olive);
+}
+
+.nfc .section-title span {
+  color: #cdd8c9;
+}
+
+.nfc-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.nfc-card {
+  padding: 35px;
+
+  border-radius: 25px;
+
+  border: 1px solid rgba(255,255,255,0.13);
+
+  background: rgba(255,255,255,0.05);
+
+  transition: 0.4s ease;
+}
+
+.nfc-card:hover {
+  transform: translateY(-7px);
+
+  background: rgba(255,255,255,0.08);
+}
+
+.nfc-icon {
+  font-size: 30px;
+
+  margin-bottom: 20px;
+}
+
+.nfc-card h3 {
+  font-family: "Amiri", serif;
+
+  font-size: 30px;
+
+  margin-bottom: 10px;
+}
+
+.nfc-card p {
+  color: #dce4d8;
+
+  font-size: 14px;
+
+  line-height: 2;
+}
+
+
+/* =========================================
+   SURAHS
+========================================= */
+
+.surahs {
+  background: var(--cream);
+
+  color: var(--text-dark);
+}
+
+.surah-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.surah {
+  padding: 20px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  font-family: "Amiri", serif;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+}
+
+.surah:hover {
+  background: var(--olive);
+
+  color: white;
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================
+   ORDER
+========================================= */
+
+.order {
+  background: var(--bg);
+
+  text-align: center;
+}
+
+.order-box {
+  max-width: 800px;
+
+  margin: auto;
+
+  padding: 65px 35px;
+
+  border-radius: 35px;
+
+  background: rgba(40,71,34,0.32);
+
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.order-box p {
+  max-width: 550px;
+
+  margin: 0 auto 30px;
+
+  color: #eeeeea;
+
+  line-height: 2;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding: 40px 8%;
+
+  background: var(--olive);
+
+  text-align: center;
+
+  color: #dce4d8;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding-top: 140px;
+  }
+
+  .hero-text {
+    margin: auto;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .product-grid,
+  .nfc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .surah-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  section {
+    padding: 80px 6%;
+  }
+
+  .hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .hero-image img {
+    width: 85%;
+  }
+
+  .surah-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
