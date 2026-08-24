@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>شفاء | حين يصبح القرآن حياة</title>
+
+  <!-- الخطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --main: #81785a;
+      --olive: #284722;
+      --white: #ffffff;
+      --soft: #eeeade;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: var(--main);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 18px 7%;
+
+      background: rgba(129, 120, 90, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .nav-logo {
+      width: 75px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #dfe7d8;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      align-items: center;
+
+      padding: 130px 8% 80px;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+      width: 500px;
+      height: 500px;
+
+      border-radius: 50%;
+
+      background: rgba(40, 71, 34, 0.18);
+
+      top: -200px;
+      left: -150px;
+
+      filter: blur(2px);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+
+      max-width: 600px;
+    }
+
+    .small-title {
+      font-size: 14px;
+      letter-spacing: 2px;
+
+      color: #e9eadf;
+
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: "Amiri", serif;
+
+      font-size: clamp(55px, 8vw, 100px);
+
+      line-height: 1;
+
+      margin-bottom: 20px;
+
+      font-weight: 700;
+    }
+
+    .hero h2 {
+      font-family: "Amiri", serif;
+
+      font-size: clamp(25px, 3vw, 42px);
+
+      font-weight: 400;
+
+      line-height: 1.7;
+
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #f0efe8;
+
+      font-size: 16px;
+
+      line-height: 2;
+
+      max-width: 500px;
+
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+
+      padding: 14px 28px;
+
+      border-radius: 40px;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--olive);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.5);
+
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .hero-image {
+      display: flex;
+
+      justify-content: center;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .hero-image img {
+      width: min(470px, 90%);
+
+      max-height: 600px;
+
+      object-fit: cover;
+
+      border-radius: 220px 220px 30px 30px;
+
+      box-shadow:
+        0 30px 70px rgba(0,0,0,0.22);
+
+      transition: 0.6s ease;
+    }
+
+    .hero-image img:hover {
+      transform: translateY(-8px) scale(1.01);
+    }
+
+    /* =========================
+       SECTION GENERAL
+    ========================= */
+
+    section {
+      padding: 110px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+
+      margin-bottom: 60px;
+    }
+
+    .section-title span {
+      display: block;
+
+      font-size: 13px;
+
+      color: #dce4d8;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 10px;
+    }
+
+    .section-title h2 {
+      font-family: "Amiri", serif;
+
+      font-size: 45px;
+
+      font-weight: 700;
+    }
+
+    /* =========================
+       PRODUCTS
+    ========================= */
+
+    .products {
+      background: #eeeade;
+
+      color: var(--olive);
+    }
+
+    .product-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .product-card {
+      background: white;
+
+      border-radius: 25px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 15px 40px rgba(40,71,34,0.08);
+
+      transition: 0.4s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-image {
+      height: 280px;
+
+      background: #d8d4c3;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: var(--olive);
+    }
+
+    .product-info {
+      padding: 25px;
+    }
+
+    .product-info h3 {
+      font-family: "Amiri", serif;
+
+      font-size: 28px;
+
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: #65705f;
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: var(--main);
+
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 750px;
+
+      margin: auto;
+    }
+
+    .about-content h2 {
+      font-family: "Amiri", serif;
+
+      font-size: 50px;
+
+      margin-bottom: 25px;
+    }
+
+    .about-content p {
+      font-size: 17px;
+
+      line-height: 2.2;
+
+      color: #f1f0e9;
+    }
+
+    /* =========================
+       NFC
+    ========================= */
+
+    .nfc {
+      background: var(--olive);
+    }
+
+    .nfc-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .nfc-card {
+      padding: 35px;
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+      border-radius: 25px;
+
+      background: rgba(255,255,255,0.05);
+
+      transition: 0.4s ease;
+    }
+
+    .nfc-card:hover {
+      background: rgba(255,255,255,0.09);
+
+      transform: translateY(-5px);
+    }
+
+    .nfc-icon {
+      font-size: 30px;
+
+      margin-bottom: 20px;
+    }
+
+    .nfc-card h3 {
+      font-family: "Amiri", serif;
+
+      font-size: 28px;
+
+      margin-bottom: 10px;
+    }
+
+    .nfc-card p {
+      color: #dce4d8;
+
+      font-size: 14px;
+
+      line-height: 2;
+    }
+
+    /* =========================
+       SURAHS
+    ========================= */
+
+    .surahs {
+      background: #eeeade;
+
+      color: var(--olive);
+    }
+
+    .surah-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+    }
+
+    .surah {
+      padding: 20px;
+
+      background: white;
+
+      border-radius: 15px;
+
+      text-align: center;
+
+      font-family: "Amiri", serif;
+
+      font-size: 22px;
+
+      cursor: pointer;
+
+      transition: 0.3s ease;
+    }
+
+    .surah:hover {
+      background: var(--olive);
+
+      color: white;
+
+      transform: translateY(-4px);
+    }
+
+    /* =========================
+       ORDER
+    ========================= */
+
+    .order {
+      background: var(--main);
+
+      text-align: center;
+    }
+
+    .order-box {
+      max-width: 750px;
+
+      margin: auto;
+
+      padding: 60px 30px;
+
+      border-radius: 35px;
+
+      background: rgba(40,71,34,0.35);
+
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .order-box h2 {
+      font-family: "Amiri", serif;
+
+      font-size: 50px;
+
+      margin-bottom: 20px;
+    }
+
+    .order-box p {
+      line-height: 2;
+
+      color: #eee;
+      
+      margin-bottom: 30px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #284722;
+
+      padding: 40px 8%;
+
+      text-align: center;
+
+      color: #dfe7d8;
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 140px;
+      }
+
+      .hero-text {
+        margin: auto;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image {
+        margin-top: 50px;
+      }
+
+      .product-grid,
+      .nfc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .surah-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <img
+      src="hero.jpg"
+      alt="شفاء"
+      class="nav-logo"
+    >
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#home">الرئيسية</a>
+      </li>
+
+      <li>
+        <a href="#products">المنتجات</a>
+      </li>
+
+      <li>
+        <a href="#about">من نحن</a>
+      </li>
+
+      <li>
+        <a href="#nfc">محتوى شفاء</a>
+      </li>
+
+      <li>
+        <a href="#surahs">السور القرآنية</a>
+      </li>
+
+      <li>
+        <a href="#order">اطلب الآن</a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <div class="small-title">
+        شفاء · رحلة تبدأ من القرآن
+      </div>
+
+      <h1>
+        شفاء
+      </h1>
+
+      <h2>
+        ونُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ
+      </h2>
+
+      <p>
+        مساحة صُممت لتعيد للقرآن حضوره في تفاصيل حياتنا،
+        من خلال منتجات وتجارب ومحتوى يقرّب القلب من كتاب الله.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#products" class="btn btn-primary">
+          اكتشف منتجات شفاء
+        </a>
+
+        <a href="#about" class="btn btn-outline">
+          تعرّف علينا
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+      <img
+        src="hero.jpg"
+        alt="شفاء - القرآن شفاء ورحمة"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRODUCTS
+  ========================= -->
+
+  <section class="products" id="products">
+
+    <div class="section-title">
+
+      <span>اختيارات شفاء</span>
+
+      <h2>
+        منتجات صُنعت لتُعاش
+      </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+      <div class="product-card">
+
+        <div class="product-image">
+          صورة المنتج
+        </div>
+
+        <div class="product-info">
+
+          <h3>
+            البوكس القرآني
+          </h3>
+
+          <p>
+            تجربة تجمع بين المنتج المادي
+            والمحتوى القرآني بطريقة مختلفة.
+          </p>
+
+          <a href="#order" class="btn btn-primary">
+            اكتشف المنتج
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <div class="product-image">
+          صورة المنتج
+        </div>
+
+        <div class="product-info">
+
+          <h3>
+            بطاقات شفاء
+          </h3>
+
+          <p>
+            كلمات وآيات وتأملات ترافقك
+            في لحظات مختلفة من يومك.
+          </p>
+
+          <a href="#order" class="btn btn-primary">
+            اكتشف المنتج
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <div class="product-image">
+          صورة المنتج
+        </div>
+
+        <div class="product-info">
+
+          <h3>
+            تجارب تفاعلية
+          </h3>
+
+          <p>
+            محتوى رقمي مرتبط بمنتجات شفاء
+            من خلال NFC وQR.
+          </p>
+
+          <a href="#nfc" class="btn btn-primary">
+            اكتشف التجربة
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section class="about" id="about">
+
+    <div class="about-content">
+
+      <div class="section-title">
+
+        <span>قصتنا</span>
+
+        <h2>
+          لماذا شفاء؟
+        </h2>
+
+      </div>
+
+      <p>
+        لأن القرآن ليس كتابًا نقرأه فقط،
+        بل نورٌ نعيش معه، ونعود إليه،
+        ونجد فيه ما يعيد ترتيب القلب والحياة.
+        جاءت شفاء لتصنع جسورًا جديدة بين الإنسان
+        والقرآن، تجمع بين جمال التجربة،
+        وعمق المعنى، وروح العصر.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       NFC CONTENT
+  ========================= -->
+
+  <section class="nfc" id="nfc">
+
+    <div class="section-title">
+
+      <span>تجربة رقمية</span>
+
+      <h2>
+        كلمات تُفتح بلمسة
+      </h2>
+
+    </div>
+
+
+    <div class="nfc-grid">
+
+      <div class="nfc-card">
+
+        <div class="nfc-icon">
+          ✦
+        </div>
+
+        <h3>
+          كتابات
+        </h3>
+
+        <p>
+          تأملات وكلمات قصيرة ترافق
+          الآيات وتفتح أبوابًا جديدة للتفكر.
+        </p>
+
+      </div>
+
+
+      <div class="nfc-card">
+
+        <div class="nfc-icon">
+          ◉
+        </div>
+
+        <h3>
+          فيديوهات
+        </h3>
+
+        <p>
+          محتوى مرئي يمكن الوصول إليه
+          مباشرة من بطاقات ومنتجات شفاء.
+        </p>
+
+      </div>
+
+
+      <div class="nfc-card">
+
+        <div class="nfc-icon">
+          ♫
+        </div>
+
+        <h3>
+          استماع
+        </h3>
+
+        <p>
+          تلاوات ومقاطع صوتية تجعل
+          تجربة المنتج تمتد إلى العالم الرقمي.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SURAHS
+  ========================= -->
+
+  <section class="surahs" id="surahs">
+
+    <div class="section-title">
+
+      <span>كتاب الله</span>
+
+      <h2>
+        السور القرآنية
+      </h2>
+
+    </div>
+
+
+    <div class="surah-grid">
+
+      <div class="surah">
+        الفاتحة
+      </div>
+
+      <div class="surah">
+        البقرة
+      </div>
+
+      <div class="surah">
+        آل عمران
+      </div>
+
+      <div class="surah">
+        النساء
+      </div>
+
+      <div class="surah">
+        المائدة
+      </div>
+
+      <div class="surah">
+        الأنعام
+      </div>
+
+      <div class="surah">
+        الأعراف
+      </div>
+
+      <div class="surah">
+        الأنفال
+      </div>
+
+      <div class="surah">
+        التوبة
+      </div>
+
+      <div class="surah">
+        يونس
+      </div>
+
+      <div class="surah">
+        هود
+      </div>
+
+      <div class="surah">
+        يوسف
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ORDER
+  ========================= -->
+
+  <section class="order" id="order">
+
+    <div class="order-box">
+
+      <div class="section-title">
+
+        <span>خطوتك الأولى</span>
+
+        <h2>
+          اطلب من شفاء
+        </h2>
+
+      </div>
+
+      <p>
+        اختر ما يناسبك من منتجات شفاء،
+        ودعنا نرافقك في رحلة مختلفة
+        مع القرآن الكريم.
+      </p>
+
+      <a href="#" class="btn btn-primary">
+        اطلب الآن
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      © 2026 شفاء — القرآن شفاء ورحمة
+    </p>
+
+  </footer>
+
+</body>
+</html>
